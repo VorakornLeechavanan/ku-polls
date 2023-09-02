@@ -16,6 +16,14 @@
   }
 },
 {
+  "model": "polls.question",
+  "pk": 3,
+  "fields": {
+    "question_text": "What is your best way to study programming language?",
+    "pub_date": "2023-09-02T03:05:30Z"
+  }
+},
+{
   "model": "polls.choice",
   "pk": 1,
   "fields": {
@@ -66,7 +74,7 @@
   "fields": {
     "question": 1,
     "choice_text": "Randomized",
-    "votes": 0
+    "votes": 1
   }
 },
 {
@@ -165,7 +173,7 @@
   "fields": {
     "question": 2,
     "choice_text": "Germany",
-    "votes": 1
+    "votes": 2
   }
 },
 {
@@ -175,6 +183,33 @@
     "question": 2,
     "choice_text": "Switzerland",
     "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 19,
+  "fields": {
+    "question": 3,
+    "choice_text": "Learn with Chatbot",
+    "votes": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 20,
+  "fields": {
+    "question": 3,
+    "choice_text": "Learn with teacher face to face or in online meeting",
+    "votes": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 21,
+  "fields": {
+    "question": 3,
+    "choice_text": "Learn from video such as Youtube",
+    "votes": 1
   }
 }
 ]
