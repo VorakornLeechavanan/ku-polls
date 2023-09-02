@@ -1,0 +1,180 @@
+[
+{
+  "model": "polls.question",
+  "pk": 1,
+  "fields": {
+    "question_text": "What is the most powerful algorithm?",
+    "pub_date": "2023-09-01T10:06:00Z"
+  }
+},
+{
+  "model": "polls.question",
+  "pk": 2,
+  "fields": {
+    "question_text": "Which is your most interesting country for the programming job?",
+    "pub_date": "2023-09-01T15:32:11Z"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 1,
+  "fields": {
+    "question": 1,
+    "choice_text": "Divide and Conquer",
+    "votes": 5
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 2,
+  "fields": {
+    "question": 1,
+    "choice_text": "Recursive",
+    "votes": 3
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 3,
+  "fields": {
+    "question": 1,
+    "choice_text": "Brute Force",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 4,
+  "fields": {
+    "question": 1,
+    "choice_text": "Greedy",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 5,
+  "fields": {
+    "question": 1,
+    "choice_text": "Dynamic Programming",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 6,
+  "fields": {
+    "question": 1,
+    "choice_text": "Randomized",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 7,
+  "fields": {
+    "question": 1,
+    "choice_text": "Backtracking",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 8,
+  "fields": {
+    "question": 2,
+    "choice_text": "China",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 9,
+  "fields": {
+    "question": 2,
+    "choice_text": "United States",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 10,
+  "fields": {
+    "question": 2,
+    "choice_text": "Netherlands",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 11,
+  "fields": {
+    "question": 2,
+    "choice_text": "Australia",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 12,
+  "fields": {
+    "question": 2,
+    "choice_text": "England",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 13,
+  "fields": {
+    "question": 2,
+    "choice_text": "Canada",
+    "votes": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 14,
+  "fields": {
+    "question": 2,
+    "choice_text": "New Zealand",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 15,
+  "fields": {
+    "question": 2,
+    "choice_text": "Sweden",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 16,
+  "fields": {
+    "question": 2,
+    "choice_text": "India",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 17,
+  "fields": {
+    "question": 2,
+    "choice_text": "Germany",
+    "votes": 1
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 18,
+  "fields": {
+    "question": 2,
+    "choice_text": "Switzerland",
+    "votes": 0
+  }
+}
+]
