@@ -17,7 +17,8 @@ class IndexView(generic.ListView):
         """
         Excludes any questions that aren't published yet.
         """
-        return Question.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
+        return Question.objects\
+            .filter(pub_date__lte=timezone.now()).order_by('-pub_date')
 
 
 class DetailView(generic.DetailView):
@@ -28,7 +29,8 @@ class DetailView(generic.DetailView):
         """
         Excludes any questions that aren't published yet.
         """
-        return Question.objects.filter(pub_date__lte=timezone.now())
+        return Question.objects\
+            .filter(pub_date__lte=timezone.now())
 
     def dispatch(self, request, *args, **kwargs):
         """
@@ -37,7 +39,8 @@ class DetailView(generic.DetailView):
         """
         txt = Question.objects.get(id=kwargs["pk"])
         if not self.get_object().can_vote():
-            messages.warning(request, f'''The question "{txt}" is unpublished.''')
+            messages.warning(request,
+                             f'''The question "{txt}" is unpublished.''')
             return redirect('polls:index')
         return super().dispatch(request, *args, **kwargs)
 
@@ -53,14 +56,16 @@ class ResultsView(generic.DetailView):
         """
         txt = Question.objects.get(id=kwargs["pk"])
         if not self.get_object().can_vote():
-            messages.warning(request, f'''The question "{txt}" is unpublished.''')
+            messages.warning(request,
+                             f'''The question "{txt}" is unpublished.''')
             return redirect('polls:index')
         return super().dispatch(request, *args, **kwargs)
 
 
 def vote(request, question_id):
     """
-    The system will warn if the user submitted without selecting any single choice.
+    The system will warn if the user submitted
+    without selecting any single choice.
     Otherwise, vote scores will be increased.
     """
     question = get_object_or_404(Question, pk=question_id)
@@ -78,5 +83,5 @@ def vote(request, question_id):
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
-        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
-
+        return HttpResponseRedirect(reverse('polls:results',
+                                            args=(question.id,)))

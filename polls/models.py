@@ -21,14 +21,18 @@ class Question(models.Model):
         return self.pub_date <= now
 
     def was_published_recently(self):
-        """Check whether the publication date is after the previous day or not"""
+        """
+        Check whether the publication date is after the previous day or not
+        """
         now = timezone.now()
         return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
     def can_vote(self):
         """
-        Check if the question is between the published date and end date or not.
-        If the end date is Null, the function will check only the published date.
+        Check if the question is between the published date and
+        end date or not.
+        If the end date is Null, the function will check
+        only the published date.
         """
         now = timezone.now()
         if self.end_date is None:
@@ -45,4 +49,3 @@ class Choice(models.Model):
     def __str__(self):
         """Set the choice name"""
         return self.choice_text
-

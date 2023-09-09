@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os.path
 from pathlib import Path
-from decouple import config, Csv
+from decouple import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default="django-insecure-%=o(%uk1d#s$b7k9kqm@q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool, default=True)
 
-ALLOWED_HOSTS = config('ALLOWED_HOST', cast=Csv(), default=[])
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[])
 
 
 # Application definition
