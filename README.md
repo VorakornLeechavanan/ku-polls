@@ -1,6 +1,6 @@
 # ku-polls
 
-[![Python application](https://github.com/VorakornLeechavanan/ku-polls/actions/workflows/python-app.yml/badge.svg)](https://github.com/VorakornLeechavanan/ku-polls/actions/workflows/python-app.yml)
+[![unittest](https://github.com/VorakornLeechavanan/ku-polls/actions/workflows/python-app.yml/badge.svg)](https://github.com/VorakornLeechavanan/ku-polls/actions/workflows/python-app.yml)
 
 KU Polls is an application for conducting a poll or survey with multiple-choice questions, 
 written in Python using Django Framework. It is based on the Django tutorial project, and adds additional functionality.
