@@ -2,10 +2,16 @@
 
 {% block content %}
   <h1> KU Polls </h1>
+  {% if messages %}
+      {% for item in messages %}
+         <div class="{{item.tags}}">{{item}}</div>
+      {% endfor %}
+  {% endif %}
   {% if latest_question_list %}
     <ul>
       {% for question in latest_question_list %}
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        <a href="{% url 'polls:results' question.id %}">Result</a>
       {% endfor %}
      </ul>
    {% else %}
