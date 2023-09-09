@@ -9,5 +9,5 @@
  {% endfor %}
  </ul>
 
- <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+ <a href="{% url 'polls:index' %}"><input type="button" value="Back to List of Polls"></a>
 {% endblock %}
