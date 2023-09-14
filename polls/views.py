@@ -3,8 +3,9 @@ from django.utils import timezone
 from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponseRedirect
 from django.views import generic
-from .models import Choice, Question
+from .models import Choice, Question, Vote
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -62,6 +63,7 @@ class ResultsView(generic.DetailView):
         return super().dispatch(request, *args, **kwargs)
 
 
+@login_required
 def vote(request, question_id):
     """
     The system will warn if the user submitted
@@ -69,6 +71,10 @@ def vote(request, question_id):
     Otherwise, vote scores will be increased.
     """
     question = get_object_or_404(Question, pk=question_id)
+
+    # if not request.user.is_authenticated:
+    #     # user must login to vote
+    #     redirect("login")
     try:
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
@@ -77,11 +83,19 @@ def vote(request, question_id):
             'question': question,
             'error_message': "You didn't select a choice.",
         })
-    else:
-        selected_choice.votes += 1
-        selected_choice.save()
-        # Always return an HttpResponseRedirect after successfully dealing
-        # with POST data. This prevents data from being posted twice if a
-        # user hits the Back button.
-        return HttpResponseRedirect(reverse('polls:results',
-                                            args=(question.id,)))
+    this_user = request.user
+    try:
+        vote = Vote.objects.get(user=this_user, choice__question=question)
+        vote.choice = selected_choice
+    except Vote.DoesNotExist:
+        vote = Vote(user=this_user, choice=selected_choice)
+    vote.save()
+    # TODO: Use messages to display a confirmation on the result page.
+
+    # else:
+    #     selected_choice.votes += 1
+    #     selected_choice.save()
+    #     # Always return an HttpResponseRedirect after successfully dealing
+    #     # with POST data. This prevents data from being posted twice if a
+    #     # user hits the Back button.
+    return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))

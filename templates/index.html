@@ -2,6 +2,12 @@
 
 {% block content %}
   <h1> KU Polls </h1>
+  {% if user.is_authenticated %}
+     <p>Welcome back, {{user.username.title}}</p>
+  {% else %}
+   Please <a href="{% url 'login' %}">Login</a> to vote
+  {% endif %}
+
   {% if messages %}
       {% for item in messages %}
          <div class="{{item.tags}}">{{item}}</div>
