@@ -91,7 +91,6 @@ def vote(request, question_id):
         vote = Vote(user=this_user, choice=selected_choice)
     vote.save()
     # TODO: Use messages to display a confirmation on the result page.
-
     # else:
     #     selected_choice.votes += 1
     #     selected_choice.save()
