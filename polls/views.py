@@ -63,6 +63,16 @@ class ResultsView(generic.DetailView):
         return super().dispatch(request, *args, **kwargs)
 
 
+def get_client_ip(request):
+    """Get the visitor’s IP address using request headers."""
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
+
 @login_required
 def vote(request, question_id):
     """
@@ -71,10 +81,6 @@ def vote(request, question_id):
     Otherwise, vote scores will be increased.
     """
     question = get_object_or_404(Question, pk=question_id)
-
-    # if not request.user.is_authenticated:
-    #     # user must login to vote
-    #     redirect("login")
     try:
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
@@ -90,11 +96,5 @@ def vote(request, question_id):
     except Vote.DoesNotExist:
         vote = Vote(user=this_user, choice=selected_choice)
     vote.save()
-    # TODO: Use messages to display a confirmation on the result page.
-    # else:
-    #     selected_choice.votes += 1
-    #     selected_choice.save()
-    #     # Always return an HttpResponseRedirect after successfully dealing
-    #     # with POST data. This prevents data from being posted twice if a
-    #     # user hits the Back button.
+    messages.success(request, "Voted Successfully")
     return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
