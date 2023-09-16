@@ -1,0 +1,56 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$pjalGaVrInDKRBjX04mwfI$abfzu6kVS3OzIRZLMMa2ma6sLnLSlpqw+l2h28PGyeg=",
+    "last_login": "2023-09-14T16:40:04.378Z",
+    "is_superuser": true,
+    "username": "vorakornleechavanan",
+    "first_name": "",
+    "last_name": "",
+    "email": "vorakorn.l@ku.th",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-09-01T09:39:53.170Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$MzIEFqaEIuWpt1DGC9745B$VaffRFZ7I/BPGACWD6b+U96wozadTupUSGboRhFxMC8=",
+    "last_login": "2023-09-16T14:30:36.253Z",
+    "is_superuser": false,
+    "username": "mandatory",
+    "first_name": "Mandatory",
+    "last_name": "",
+    "email": "mandatory@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-12T08:07:48.489Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$T4rHtIxlJTUkxgYlxP7zhT$s9PFuSk2Co9ikpJ9xfKLQjr08SWEzXcoJADo7c02OGQ=",
+    "last_login": "2023-09-16T14:30:04.497Z",
+    "is_superuser": false,
+    "username": "mandatory2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-15T09:50:11.480Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

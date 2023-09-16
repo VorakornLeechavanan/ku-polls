@@ -49,8 +49,7 @@
   "pk": 1,
   "fields": {
     "question": 1,
-    "choice_text": "Divide and Conquer",
-    "votes": 6
+    "choice_text": "Divide and Conquer"
   }
 },
 {
@@ -58,8 +57,7 @@
   "pk": 2,
   "fields": {
     "question": 1,
-    "choice_text": "Recursive",
-    "votes": 4
+    "choice_text": "Recursive"
   }
 },
 {
@@ -67,8 +65,7 @@
   "pk": 3,
   "fields": {
     "question": 1,
-    "choice_text": "Brute Force",
-    "votes": 0
+    "choice_text": "Brute Force"
   }
 },
 {
@@ -76,8 +73,7 @@
   "pk": 4,
   "fields": {
     "question": 1,
-    "choice_text": "Greedy",
-    "votes": 0
+    "choice_text": "Greedy"
   }
 },
 {
@@ -85,8 +81,7 @@
   "pk": 5,
   "fields": {
     "question": 1,
-    "choice_text": "Dynamic Programming",
-    "votes": 0
+    "choice_text": "Dynamic Programming"
   }
 },
 {
@@ -94,8 +89,7 @@
   "pk": 6,
   "fields": {
     "question": 1,
-    "choice_text": "Randomized",
-    "votes": 2
+    "choice_text": "Randomized"
   }
 },
 {
@@ -103,8 +97,7 @@
   "pk": 7,
   "fields": {
     "question": 1,
-    "choice_text": "Backtracking",
-    "votes": 0
+    "choice_text": "Backtracking"
   }
 },
 {
@@ -112,8 +105,7 @@
   "pk": 8,
   "fields": {
     "question": 2,
-    "choice_text": "China",
-    "votes": 0
+    "choice_text": "China"
   }
 },
 {
@@ -121,8 +113,7 @@
   "pk": 9,
   "fields": {
     "question": 2,
-    "choice_text": "United States",
-    "votes": 1
+    "choice_text": "United States"
   }
 },
 {
@@ -130,8 +121,7 @@
   "pk": 10,
   "fields": {
     "question": 2,
-    "choice_text": "Netherlands",
-    "votes": 0
+    "choice_text": "Netherlands"
   }
 },
 {
@@ -139,8 +129,7 @@
   "pk": 11,
   "fields": {
     "question": 2,
-    "choice_text": "Australia",
-    "votes": 0
+    "choice_text": "Australia"
   }
 },
 {
@@ -148,8 +137,7 @@
   "pk": 12,
   "fields": {
     "question": 2,
-    "choice_text": "England",
-    "votes": 0
+    "choice_text": "England"
   }
 },
 {
@@ -157,8 +145,7 @@
   "pk": 13,
   "fields": {
     "question": 2,
-    "choice_text": "Canada",
-    "votes": 2
+    "choice_text": "Canada"
   }
 },
 {
@@ -166,8 +153,7 @@
   "pk": 14,
   "fields": {
     "question": 2,
-    "choice_text": "New Zealand",
-    "votes": 0
+    "choice_text": "New Zealand"
   }
 },
 {
@@ -175,8 +161,7 @@
   "pk": 15,
   "fields": {
     "question": 2,
-    "choice_text": "Sweden",
-    "votes": 0
+    "choice_text": "Sweden"
   }
 },
 {
@@ -184,8 +169,7 @@
   "pk": 16,
   "fields": {
     "question": 2,
-    "choice_text": "India",
-    "votes": 1
+    "choice_text": "India"
   }
 },
 {
@@ -193,8 +177,7 @@
   "pk": 17,
   "fields": {
     "question": 2,
-    "choice_text": "Germany",
-    "votes": 2
+    "choice_text": "Germany"
   }
 },
 {
@@ -202,8 +185,7 @@
   "pk": 18,
   "fields": {
     "question": 2,
-    "choice_text": "Switzerland",
-    "votes": 0
+    "choice_text": "Switzerland"
   }
 },
 {
@@ -211,8 +193,7 @@
   "pk": 19,
   "fields": {
     "question": 3,
-    "choice_text": "Learn with Chatbot",
-    "votes": 4
+    "choice_text": "Learn with Chatbot"
   }
 },
 {
@@ -220,8 +201,7 @@
   "pk": 20,
   "fields": {
     "question": 3,
-    "choice_text": "Learn with teacher face to face or in online meeting",
-    "votes": 6
+    "choice_text": "Learn with teacher face to face or in online meeting"
   }
 },
 {
@@ -229,8 +209,7 @@
   "pk": 21,
   "fields": {
     "question": 3,
-    "choice_text": "Learn from video such as Youtube",
-    "votes": 6
+    "choice_text": "Learn from video such as Youtube"
   }
 },
 {
@@ -238,8 +217,7 @@
   "pk": 22,
   "fields": {
     "question": 5,
-    "choice_text": "Scrum",
-    "votes": 1
+    "choice_text": "Scrum"
   }
 },
 {
@@ -247,8 +225,7 @@
   "pk": 23,
   "fields": {
     "question": 5,
-    "choice_text": "Waterfall",
-    "votes": 0
+    "choice_text": "Waterfall"
   }
 },
 {
@@ -256,8 +233,7 @@
   "pk": 24,
   "fields": {
     "question": 5,
-    "choice_text": "Kanban",
-    "votes": 1
+    "choice_text": "Kanban"
   }
 },
 {
@@ -265,8 +241,7 @@
   "pk": 25,
   "fields": {
     "question": 5,
-    "choice_text": "Spiral",
-    "votes": 0
+    "choice_text": "Spiral"
   }
 },
 {
@@ -274,8 +249,7 @@
   "pk": 26,
   "fields": {
     "question": 4,
-    "choice_text": "git log",
-    "votes": 0
+    "choice_text": "git log"
   }
 },
 {
@@ -283,8 +257,7 @@
   "pk": 27,
   "fields": {
     "question": 4,
-    "choice_text": "git diff",
-    "votes": 0
+    "choice_text": "git diff"
   }
 },
 {
@@ -292,8 +265,7 @@
   "pk": 28,
   "fields": {
     "question": 4,
-    "choice_text": "git rebase",
-    "votes": 0
+    "choice_text": "git rebase"
   }
 },
 {
@@ -301,8 +273,7 @@
   "pk": 29,
   "fields": {
     "question": 3,
-    "choice_text": "Learn with online course",
-    "votes": 0
+    "choice_text": "Learn with online course"
   }
 },
 {
@@ -310,8 +281,63 @@
   "pk": 30,
   "fields": {
     "question": 4,
-    "choice_text": "git remote",
-    "votes": 0
+    "choice_text": "git remote"
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 1,
+  "fields": {
+    "choice": 22,
+    "user": 2
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 2,
+  "fields": {
+    "choice": 13,
+    "user": 2
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 3,
+  "fields": {
+    "choice": 6,
+    "user": 2
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 4,
+  "fields": {
+    "choice": 21,
+    "user": 2
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 5,
+  "fields": {
+    "choice": 28,
+    "user": 2
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 6,
+  "fields": {
+    "choice": 22,
+    "user": 3
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 7,
+  "fields": {
+    "choice": 21,
+    "user": 3
   }
 }
 ]
