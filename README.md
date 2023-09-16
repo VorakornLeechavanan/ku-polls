@@ -8,6 +8,13 @@ written in Python using Django Framework. It is based on the Django tutorial pro
 This application is an individual assignment of 
 the 2023/24 Individual Software Process course at Kasetsart University.
 
+# Username
+
+| Username   | Password             |
+|------------|----------------------|
+| mandatory  | NotMandatory12092023 |
+| mandatory2 | NotMandatory15092023 |
+
 # How to run?
 
 To Be Added
