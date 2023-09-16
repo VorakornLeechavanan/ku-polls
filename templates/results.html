@@ -2,6 +2,11 @@
 
 {% block content %}
  <h1>{{ question.question_text }}</h1>
+  {% if messages %}
+      {% for item in messages %}
+         <div class="{{item.tags}}">{{item}}</div>
+      {% endfor %}
+  {% endif %}
   <table class="table">
     <thead>
        <tr>
