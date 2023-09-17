@@ -27,5 +27,6 @@ All Project Documents are included as a part of [Wiki](https://github.com/Vorako
 * [Development Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Development-Plan)
 * [Iteration 1 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-1-Plan)
 * [Iteration 2 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-2-Plan)
+* [Iteration 3 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-3-Plan)
 * [Requirements](https://github.com/VorakornLeechavanan/ku-polls/wiki/Requirements)
 * [Vision](https://github.com/VorakornLeechavanan/ku-polls/wiki/Vision)
