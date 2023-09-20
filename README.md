@@ -10,14 +10,33 @@ the 2023/24 Individual Software Process course at Kasetsart University.
 
 # Username
 
-| Username   | Password             |
-|------------|----------------------|
-| mandatory  | NotMandatory12092023 |
-| mandatory2 | NotMandatory15092023 |
+| Username             | Password             |
+|----------------------|----------------------|
+| mandatory            | NotMandatory12092023 |
+| mandatory2           | NotMandatory15092023 |
+| vorakornleechavanan  | polyphiaisawesome    |
 
 # How to run?
 
-To Be Added
+First step, write this command in a terminal to clone the README.md file
+
+```
+git clone https://github.com/VorakornLeechavanan/ku-polls.git
+```
+
+Next, download all required libraries from "requirements.txt" file to a user device.
+
+```
+pip install -r requirements.txt
+```
+
+To run the server, write this command. For exiting an application, type CTRL-C in the terminal.
+
+```
+python manage.py runserver
+```
+
+
 
 # Project Documents
 
