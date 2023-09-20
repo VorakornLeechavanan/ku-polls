@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$600000$pjalGaVrInDKRBjX04mwfI$abfzu6kVS3OzIRZLMMa2ma6sLnLSlpqw+l2h28PGyeg=",
-    "last_login": "2023-09-14T16:40:04.378Z",
+    "last_login": "2023-09-20T08:31:29.100Z",
     "is_superuser": true,
     "username": "vorakornleechavanan",
     "first_name": "",
