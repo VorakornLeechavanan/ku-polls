@@ -51,6 +51,10 @@ python manage.py runserver
 
 
 # Project Documents
+ 
+An installation document for providing the installation command.
+
+* [Installation](Installation.md)
 
 List of Project Documents that are included as a part of [Wiki](https://github.com/VorakornLeechavanan/ku-polls/wiki)
 
@@ -60,5 +64,6 @@ List of Project Documents that are included as a part of [Wiki](https://github.c
 * [Iteration 1 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-1-Plan)
 * [Iteration 2 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-2-Plan)
 * [Iteration 3 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-3-Plan)
+* [Iteration 4 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-4-Plan)
 * [Requirements](https://github.com/VorakornLeechavanan/ku-polls/wiki/Requirements)
 * [Vision](https://github.com/VorakornLeechavanan/ku-polls/wiki/Vision)
