@@ -93,11 +93,11 @@ def vote(request, question_id):
         })
     this_user = request.user
     try:
-        vote = Vote.objects.get(user=this_user, choice__question=question)
-        vote.choice = selected_choice
+        vote_obj = Vote.objects.get(user=this_user, choice__question=question)
+        vote_obj.choice = selected_choice
     except Vote.DoesNotExist:
-        vote = Vote(user=this_user, choice=selected_choice)
-    vote.save()
+        vote_obj = Vote(user=this_user, choice=selected_choice)
+    vote_obj.save()
     messages.success(request, "Voted Successfully")
     return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
@@ -112,7 +112,7 @@ def signup(request):
             username = form.cleaned_data.get('username')
             # password input field is named 'password1'
             raw_passwd = form.cleaned_data.get('password1')
-            user = authenticate(username=username,password=raw_passwd)
+            user = authenticate(username=username, password=raw_passwd)
             login(request, user)
             return redirect('polls:index')
         # what if form is not valid?

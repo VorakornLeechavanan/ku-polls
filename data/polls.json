@@ -5,7 +5,7 @@
   "fields": {
     "question_text": "What is the most powerful algorithm?",
     "pub_date": "2023-09-01T10:06:00Z",
-    "end_date": "2023-09-18T22:54:00Z"
+    "end_date": null
   }
 },
 {
@@ -30,9 +30,9 @@
   "model": "polls.question",
   "pk": 4,
   "fields": {
-    "question_text": "What is the most important git command for your coding?",
+    "question_text": "According to these choices, what is the most important git command for your coding routine?",
     "pub_date": "2023-09-06T16:27:46Z",
-    "end_date": "2023-09-28T16:29:00Z"
+    "end_date": null
   }
 },
 {
@@ -270,18 +270,42 @@
 },
 {
   "model": "polls.choice",
-  "pk": 29,
-  "fields": {
-    "question": 3,
-    "choice_text": "Learn with online course"
-  }
-},
-{
-  "model": "polls.choice",
   "pk": 30,
   "fields": {
     "question": 4,
     "choice_text": "git remote"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 31,
+  "fields": {
+    "question": 1,
+    "choice_text": "Others"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 32,
+  "fields": {
+    "question": 2,
+    "choice_text": "Others"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 33,
+  "fields": {
+    "question": 3,
+    "choice_text": "Others"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 34,
+  "fields": {
+    "question": 5,
+    "choice_text": "Others"
   }
 },
 {
@@ -338,6 +362,22 @@
   "fields": {
     "choice": 21,
     "user": 3
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 8,
+  "fields": {
+    "choice": 24,
+    "user": 1
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 9,
+  "fields": {
+    "choice": 27,
+    "user": 1
   }
 }
 ]

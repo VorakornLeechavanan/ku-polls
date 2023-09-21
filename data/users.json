@@ -3,8 +3,8 @@
   "model": "auth.user",
   "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$600000$pjalGaVrInDKRBjX04mwfI$abfzu6kVS3OzIRZLMMa2ma6sLnLSlpqw+l2h28PGyeg=",
-    "last_login": "2023-09-14T16:40:04.378Z",
+    "password": "pbkdf2_sha256$600000$cAakAZmPH1YNAZkBblINDg$ram44SsKCI2UFiqxUeLWR3VLDU13RbQA+NCKEjVx40Y=",
+    "last_login": "2023-09-20T14:21:06.630Z",
     "is_superuser": true,
     "username": "vorakornleechavanan",
     "first_name": "",

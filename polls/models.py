@@ -55,6 +55,7 @@ class Choice(models.Model):
         """Set the choice name"""
         return self.choice_text
 
+
 class Vote(models.Model):
     """Records a Vote of a Choice by a User."""
     choice = models.ForeignKey(Choice, on_delete=models.CASCADE)
