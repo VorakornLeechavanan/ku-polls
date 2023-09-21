@@ -24,6 +24,18 @@ First step, write this command in a terminal to clone the README.md file
 git clone https://github.com/VorakornLeechavanan/ku-polls.git
 ```
 
+Then, writs this command for creating a virtual environment
+
+```
+python -m venv env
+```
+
+Activate a virtual environment. To stop activating, write "deactivate" in the terminal.
+
+```
+. env/bin/activate
+```
+
 Next, download all required libraries from "requirements.txt" file to a user device.
 
 ```
@@ -40,7 +52,7 @@ python manage.py runserver
 
 # Project Documents
 
-All Project Documents are included as a part of [Wiki](https://github.com/VorakornLeechavanan/ku-polls/wiki)
+List of Project Documents that are included as a part of [Wiki](https://github.com/VorakornLeechavanan/ku-polls/wiki)
 
 * [Home](https://github.com/VorakornLeechavanan/ku-polls/wiki)
 * [Domain Model](https://github.com/VorakornLeechavanan/ku-polls/wiki/Domain-Model)
