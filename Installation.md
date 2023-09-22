@@ -34,6 +34,14 @@ Run the application tests
 python manage.py test
 ```
 
+Load the data
+```
+python manage.py loaddata data/polls.json
+```
+```
+python manage.py loaddata data/users.json
+```
+
 Run the server
 
 ```
