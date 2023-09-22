@@ -24,7 +24,7 @@ First step, write this command in a terminal to clone the README.md file
 git clone https://github.com/VorakornLeechavanan/ku-polls.git
 ```
 
-Then, writs this command for creating a virtual environment
+Then, write this command for creating a virtual environment
 
 ```
 python -m venv env
