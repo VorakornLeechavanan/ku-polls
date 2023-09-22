@@ -35,12 +35,16 @@ python manage.py test
 ```
 
 Load the data
-```
-python manage.py loaddata data/polls.json
-```
+
 ```
 python manage.py loaddata data/users.json
 ```
+```
+python manage.py loaddata data/polls.json
+```
+
+* load the data from the users.json first and then polls.json to prevent an error
+
 
 Run the server
 
