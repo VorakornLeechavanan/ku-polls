@@ -328,7 +328,7 @@
   "model": "polls.vote",
   "pk": 3,
   "fields": {
-    "choice": 6,
+    "choice": 2,
     "user": 2
   }
 },
@@ -336,7 +336,7 @@
   "model": "polls.vote",
   "pk": 4,
   "fields": {
-    "choice": 21,
+    "choice": 19,
     "user": 2
   }
 },
@@ -368,7 +368,7 @@
   "model": "polls.vote",
   "pk": 8,
   "fields": {
-    "choice": 24,
+    "choice": 23,
     "user": 1
   }
 },
@@ -376,8 +376,40 @@
   "model": "polls.vote",
   "pk": 9,
   "fields": {
-    "choice": 27,
+    "choice": 30,
     "user": 1
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 10,
+  "fields": {
+    "choice": 16,
+    "user": 1
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 11,
+  "fields": {
+    "choice": 21,
+    "user": 1
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 12,
+  "fields": {
+    "choice": 16,
+    "user": 3
+  }
+},
+{
+  "model": "polls.vote",
+  "pk": 13,
+  "fields": {
+    "choice": 28,
+    "user": 3
   }
 }
 ]
