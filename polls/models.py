@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 class Question(models.Model):
     """The question as a part of KU Poll"""
     question_text = models.CharField(max_length=250)
-    pub_date = models.DateTimeField("date published")
+    pub_date = models.DateTimeField("date published", default=timezone.now)
     end_date = models.DateTimeField("date ended", blank=True, null=True)
 
     def __str__(self):

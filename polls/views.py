@@ -30,17 +30,21 @@ class DetailView(generic.DetailView):
 
     def get(self, request, *args, **kwargs):
         """
-        Previous submitted choice will be selected in case a user redo the question.
+        Previous submitted choice will be selected in case
+        a user redo the question.
         """
         question = Question.objects.get(id=kwargs["pk"])
         selected_choice = None
         if request.user.is_authenticated:
             try:
-               vote = Vote.objects.get(user=request.user, choice__question=question)
-               selected_choice = vote.choice
+                voting = Vote.objects.get(user=request.user,
+                                          choice__question=question)
+                selected_choice = voting.choice
             except Vote.DoesNotExist:
-               pass
-        return render(request, 'detail.html', {"question": question, "selected_choice": selected_choice})
+                pass
+        return render(request, 'detail.html', {"question": question,
+                                               "selected_choice":
+                                                   selected_choice})
 
     def get_queryset(self):
         """
