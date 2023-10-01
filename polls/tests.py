@@ -1,9 +1,9 @@
 import datetime
-from .models import Question
+from .models import Question, Choice, Vote
 from django.test import TestCase
 from django.utils import timezone
 from django.urls import reverse
-
+from django.contrib.auth.models import User
 # Create your tests here.
 
 
@@ -97,6 +97,37 @@ class IsPublishedTests(TestCase):
                                     days=-10)
         self.assertTrue(question1.is_published(), question2.is_published())
 
+    def test_is_published_turn_past_into_future_question(self):
+        """
+        If the question published date has been modified from past to future,
+        is_published must return False.
+        """
+        question = create_question(question_text="Question", days=-1)
+        self.assertTrue(question.is_published())
+        time = timezone.now() + datetime.timedelta(days=1)
+        question.pub_date = time
+        question.save()
+        self.assertFalse(question.is_published())
+
+    def test_is_published_turn_future_into_past_question(self):
+        """
+        If the question published date has been modified from future to past,
+        is_published must return True.
+        """
+        question = create_question(question_text="Question", days=1)
+        self.assertFalse(question.is_published())
+        time = timezone.now() + datetime.timedelta(days=-1)
+        question.pub_date = time
+        question.save()
+        self.assertTrue(question.is_published())
+
+    def test_is_published_default_pub_date_question(self):
+        """
+        Default published date question must be displayed in the detail page
+        """
+        question = Question(question_text="Question")
+        self.assertTrue(question.is_published())
+
 
 class CanVoteTests(TestCase):
 
@@ -150,3 +181,47 @@ class CanVoteTests(TestCase):
             end_date=timezone.now() + timezone.timedelta(days=2)
         )
         self.assertFalse(question.can_vote())
+
+
+class Authentication(TestCase):
+
+    def test_authentication_logged_in_user_can_vote(self):
+        """
+        Test that user can submit his/her desired choice in the application
+        """
+        user = User.objects.create_user(username='mandatory',
+                                        password='NotMandatory')
+        question = create_question("Question", days=0)
+        choice = Choice.objects.create(choice_text="Choice", question=question)
+        self.client.login(username='mandatory', password='NotMandatory')
+        self.client.post(reverse('polls:vote', args=[question.pk]),
+                         {'choice': choice.pk})
+        vote = Vote.objects.get(user=user, choice__question=question)
+        self.assertEqual(vote.choice, choice)
+
+    def test_authentication_user_redo_the_question(self):
+        """
+        Test the updating after a user redo the question and
+        submit new choice.
+        """
+        user = User.objects.create_user(username='mandatory2',
+                                        password='NotMandatory')
+        question = create_question("Question", days=0)
+        choice = Choice.objects.create(choice_text="Choice", question=question)
+        choice2 = Choice.objects.create(choice_text="Choice 2",
+                                        question=question)
+        self.client.login(username='mandatory2', password='NotMandatory')
+        self.client.post(reverse('polls:vote', args=[question.pk]),
+                         {'choice': choice.pk})
+        vote = Vote.objects.get(user=user, choice__question=question)
+        self.assertEqual(vote.choice, choice)
+        self.assertNotEqual(vote.choice, choice2)
+        self.assertEqual(choice.votes, 1)
+        self.assertEqual(choice2.votes, 0)
+        self.client.post(reverse('polls:vote', args=[question.pk]),
+                         {'choice': choice2.pk})
+        vote2 = Vote.objects.get(user=user, choice__question=question)
+        self.assertNotEqual(vote2.choice, choice)
+        self.assertEqual(vote2.choice, choice2)
+        self.assertEqual(choice.votes, 0)
+        self.assertEqual(choice2.votes, 1)

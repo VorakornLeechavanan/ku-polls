@@ -27,13 +27,19 @@ git clone https://github.com/VorakornLeechavanan/ku-polls.git
 Then, write this command for creating a virtual environment
 
 ```
-python -m venv env
+python -m venv venv
 ```
 
 Activate a virtual environment. To stop activating, write "deactivate" in the terminal.
 
+- For MacOS or Linux
 ```
-. env/bin/activate
+source venv/bin/activate
+```
+
+- For Windows
+```
+venv\Scripts\activate
 ```
 
 Next, download all required libraries from "requirements.txt" file to a user device.
@@ -61,9 +67,9 @@ List of Project Documents that are included as a part of [Wiki](https://github.c
 * [Home](https://github.com/VorakornLeechavanan/ku-polls/wiki)
 * [Domain Model](https://github.com/VorakornLeechavanan/ku-polls/wiki/Domain-Model)
 * [Development Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Development-Plan)
-* [Iteration 1 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-1-Plan)
-* [Iteration 2 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-2-Plan)
-* [Iteration 3 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-3-Plan)
-* [Iteration 4 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-4-Plan)
+* [Iteration 1 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-1-Plan) and [Iteration 1 Board](https://github.com/users/VorakornLeechavanan/projects/3)
+* [Iteration 2 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-2-Plan) and [Iteration 2 Board](https://github.com/users/VorakornLeechavanan/projects/4)
+* [Iteration 3 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-3-Plan) and [Iteration 3 Board](https://github.com/users/VorakornLeechavanan/projects/5)
+* [Iteration 4 Plan](https://github.com/VorakornLeechavanan/ku-polls/wiki/Iteration-4-Plan) and [Iteration 4 Board](https://github.com/users/VorakornLeechavanan/projects/6)
 * [Requirements](https://github.com/VorakornLeechavanan/ku-polls/wiki/Requirements)
 * [Vision](https://github.com/VorakornLeechavanan/ku-polls/wiki/Vision)

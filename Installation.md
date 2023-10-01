@@ -9,13 +9,19 @@ git clone https://github.com/VorakornLeechavanan/ku-polls.git
 Creating a virtual environment
 
 ```
-python -m venv env
+python -m venv venv
 ```
 
 Activate a virtual environment
 
+- For MacOS or Linux
 ```
-. env/bin/activate
+source venv/bin/activate
+```
+
+- For Windows
+```
+venv\Scripts\activate
 ```
 
 Download all required libraries from "requirements.txt" file to a user device.
